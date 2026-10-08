@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GG Editor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader" class="hero">
+    <img src="logo.jpg" class="hero-logo" alt="logo">
+    <div class="hero-title">GG</div>
+    <div class="hero-sub">Code · Build · Win</div>
+    <div class="hero-loader">
+        <div class="hero-loader-fill"></div>
+    </div>
+</div>
+
+<!-- NAV -->
+<nav>
+    <div class="logo">
+        <a href="index.html"><img src="logo.jpg" alt="logo"></a>
+    </div>
+    <div class="nav-links">
+        <a href="learning.html" class="nav-learn">Learn</a>
+    </div>
+</nav>
+
+<!-- MAIN -->
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-title">Files</div>
+        <div class="file">main.gg</div>
+    </aside>
+
+    <!-- EDITOR -->
+    <div class="editor">
+        <div class="tabs">
+            <div class="tab active">main.gg</div>
+        </div>
+        <textarea id="codeEditor" placeholder="Start coding with your language..."></textarea>
+    </div>
+
+    <!-- OUTPUT PANEL -->
+    <div class="output">
+        <div class="output-header">
+            <div class="output-tabs">
+                <button class="out-tab active" data-tab="output" onclick="switchTab('output', this)">Output</button>
+                <button class="out-tab" data-tab="scanner" onclick="switchTab('scanner', this)">Scanner</button>
+                <button class="out-tab" data-tab="parser" onclick="switchTab('parser', this)">Parser</button>
+                <button class="out-tab" data-tab="semantic" onclick="switchTab('semantic', this)">Semantic</button>
+                <button class="out-tab" data-tab="codegen" onclick="switchTab('codegen', this)">Generated</button>
+            </div>
+            <button class="run-btn" onclick="runCode()">▶ Run</button>
+        </div>
+
+        <div id="tab-output"   class="terminal active-terminal"><span class="placeholder">Output will appear here…</span></div>
+        <div id="tab-scanner"  class="terminal"><span class="placeholder">Scanner tokens will appear here…</span></div>
+        <div id="tab-parser"   class="terminal"><span class="placeholder">AST will appear here…</span></div>
+        <div id="tab-semantic" class="terminal"><span class="placeholder">Semantic analysis will appear here…</span></div>
+        <div id="tab-codegen"  class="terminal"><span class="placeholder">Generated Python will appear here…</span></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

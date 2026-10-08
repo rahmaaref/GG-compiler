@@ -1,0 +1,67 @@
+.learn-container {
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    color: #00F5FF;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #FF00CC;
+}
+
+p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #160030;
+    color: #00F5FF;
+}
+
+td {
+    background: rgba(255,255,255,0.03);
+}
+
+/* CODE EXAMPLES */
+.example {
+    position: relative;
+    background: #050010;
+    border-radius: 6px;
+    margin-top: 15px;
+    padding: 15px;
+}
+
+.example pre {
+    color: #50FA7B;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.example button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #00F5FF;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
